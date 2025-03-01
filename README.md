@@ -1,2 +1,2 @@
 # exclipse-roleplay
-GTA V roleplay webpasge
+GTA V roleplay webpage
