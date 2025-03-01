@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclipse Roleplay</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+
+      // Toggle menu visibility on mobile
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body
+    class="bg-[url(https://s3-alpha-sig.figma.com/img/e871/d841/596858d0972405330aaeda4f1b41e519?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=YDUrJoBARCXPAXs1n02mPdQd5TaVexO9d~UqPSE3IpfHjVUbMbR1pSQSpqQqsKiGGLeLmivVCHnv5iH0yCwoXadALKhLn3OyRRgPEcqy6Y4c07p8RRPQ3QdkV0Xk60R6GrVDqhmMrIABY-5sjicPCvDUYc4TyPtVp8aGVbQ54g-KeEeJqFNxyHSI5NSEdlhnoiX1eg3iPaYCTSdcjOuxXe3aFqOYSlfNKvYSfUp8oUfxKViG1TcrbD~EWimAAAuUN77jDqDKrBhexM6H14HUuTGR-P2p-2pIR3lH3Z-efY1RELRjx8zxAQSwbnqbYf5kjjnbV7MfKVVnQkk6ta6YVQ__)] bg-no-repeat bg-cover w-full h-screen"
+  >
+    <header class="bg-[#000000B2] px-6 py-4">
+      <nav
+        class="flex items-center justify-between w-full md:w-[92%] mx-auto flex-wrap"
+      >
+        <!-- Logó és szöveg együtt -->
+        <div class="flex items-center gap-2">
+          <img
+            class="w-[72px] h-[75px]"
+            src="https://s3-alpha-sig.figma.com/img/996f/54b5/0f2c592c5e43e82a4121b8375945ba71?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=AK7tK~dlOKRQ7MGYGAnUfaSQQuuN1oUY~pHen71alC2nIxn06t-IMgtrHVPZFculfm2~Xa9JYm9QqZH0SDZHJA8LVEkcheMxPJyBFlFT3Od-EzcvjAAaZsE61d6s316-ixPCNIrp4NeBzL-dyPNEWjN34cI9nEtmBlz3N8gpi-pYUhbDFOc1nNU2FahqVOybQv-RVSe37ZIC9rDO1VdruTxmkepeTcFizjxeNxAP0jYXw7BZrwlXIt2VkabPV4jVKq64BOqOPcZNgJ7r6T8y5FyqIzVftZ0v3GPhGirfjkuljFtCen67ZgIIUux-fR55V9jc4VaFVH2mWh1x-KgVKA__"
+            alt="logo"
+          />
+          <h1 class="text-white text-2xl font-[Outfit] font-bold">
+            <span class="text-[#D5371B]">EXCLIPSE</span> ROLEPLAY
+          </h1>
+        </div>
+
+        <!-- Hamburger Icon (Mobile Only) -->
+        <div class="md:hidden flex items-center">
+          <button onclick="toggleMenu()" class="text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Menu (Mobile View Hidden Initially) -->
+        <div
+          id="mobile-menu"
+          class="hidden w-full md:w-auto flex-grow md:flex md:justify-center md:flex-row flex-col mt-4 md:mt-0 gap-6 md:gap-[4vw]"
+        >
+          <ul class="flex flex-col md:flex-row gap-10">
+            <li>
+              <a
+                class="text-[18px] font-[Outfit] font-bold text-[#D5371B]"
+                href="#"
+                >Főoldal</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[18px] font-[Outfit] font-bold text-white"
+                href="/közösség.html"
+                >Közösség</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[18px] font-[Outfit] font-bold text-[#D5371B]"
+                href="#"
+                >Leírások</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[18px] font-[Outfit] font-bold text-white"
+                href="/szabályzat.html"
+                >Szabályzat</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Discord gomb -->
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+          <button
+            class="bg-[#D5371B] w-[160px] h-[40px] rounded-full text-white font-[Outfit] text-[14px] font-bold px-5 py-2 hover:bg-[#cf2f13]"
+          >
+            <a class="text-black" href="https://discord.gg/hhJNG7V6xC"
+              >DISCORD</a
+            >
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <div
+      class="flex flex-col md:items-end md:pr-[150px] lg:pr-[300px] md:pt-[200px] px-6 text-center md:text-right"
+    >
+      <h2
+        class="text-3xl md:text-4xl lg:text-5xl font-[Outfit] font-bold text-white"
+      >
+        <span class="text-[#D5371B]">GTA 5</span> Fivem Roleplay
+      </h2>
+      <article class="font-[Outfit] text-[#DDDDDD] text-base md:text-lg py-4">
+        Lépj be egy élettel teli városba, ahol a döntéseid formálják a
+        sorsod.<br />
+        Izgalmas szerepjáték, dinamikus közösség és határtalan lehetőségek
+        várnak rád.
+      </article>
+
+      <!-- Button Container -->
+      <div
+        class="flex flex-col md:flex-row gap-6 mt-8 items-center md:justify-end"
+      >
+        <!-- First Button -->
+        <div
+          class="flex items-center gap-2 min-w-[200px] md:min-w-[250px] h-[80px] bg-[#00000099] rounded-full justify-center"
+        >
+          <img
+            class="w-[40px] md:w-[50px] h-[40px] md:h-[50px] rounded-full filter grayscale"
+            src="/images/ember.png"
+            alt="Ember"
+          />
+          <span
+            class="text-white text-[16px] md:text-[18px] font-[Outfit] font-bold"
+          >
+            KÉSZEN ÁLLSZ?
+          </span>
+        </div>
+
+        <!-- Second Button -->
+        <div
+          class="flex items-center gap-2 min-w-[200px] md:min-w-[250px] h-[80px] bg-[#00000099] rounded-full justify-center"
+        >
+          <img
+            class="w-[40px] md:w-[50px] h-[40px] md:h-[50px] rounded-full filter grayscale"
+            src="/images/korona.png"
+            alt="Korona"
+          />
+          <span
+            class="text-white text-[16px] md:text-[18px] font-[Outfit] font-bold"
+          >
+            <span class="text-[#D5371B]">EXclipse</span> RolePlay
+          </span>
+        </div>
+      </div>
+
+      <!-- Try Now Button -->
+      <div class="flex justify-center px-[148px] md:justify-end mt-6 md:mt-8">
+        <button
+          class="hover:bg-[#000000B2] text-[#D5371B] min-w-[200px] md:min-w-[250px] h-[80px] bg-[#00000099] rounded-full flex items-center justify-center"
+        >
+          <a
+            href="http://185.221.21.93:40120/"
+            class="text-[16px] md:text-[18px] font-[Outfit] font-bold"
+            >PRÓBÁLD KI MOST</a
+          >
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+  </body>
+</html>
