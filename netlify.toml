@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/szabályzat.html"
   to = "/szabályzat"
-  status = 200
+  status = 302
